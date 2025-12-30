@@ -1,0 +1,47 @@
+site_name: CCChiJi Docs
+theme:
+  name: material #指定的主题
+
+  icon:
+    logo: material/cat
+
+  language: zh #界面语言
+
+  features: #启用material特色功能
+    - navigation.sections
+    - navigation.instant
+    - navigation.top #返回顶部按钮
+    - navigation.tabs #顶部导航标签页
+    - navigation.expand #让分组默认展开
+    - navigation.sections #侧边栏分组折叠
+    - search.suggest #搜索建议
+    - search.highlight #搜索结果高亮
+    - content.tabs.link #内容标签页支持锚点
+  palette: #配色方案（支持自动切换暗黑/亮色）
+    - media: "(prefers-color-scheme: light)" #亮色模式
+      scheme: default
+      primary: blue #主色调
+      accent: orange #强调色 橙色
+    - media: "(prefers-color-scheme: dark)" #暗黑模式
+      scheme: slate
+      primary: blue #主题色
+      accent: cyan #强调色 青色
+
+nav: #网站导航结构（侧边栏和顶部标签页的内容）
+  - 首页: index.md # 导航项名称 -> 对应docs目录下的Markdown文件
+  - 外部资源:
+    - MkDocs 官网: https://mkdocs.org
+    - Material 文档: https://squidfunk.github.io/mkdocs-material/
+
+markdown_extensions: #扩展项
+  - admonition  # 新增：启用提示框扩展
+  - pymdownx.tabbed:  # 启用内容标签页扩展
+      alternate_style: true  # 可选：启用交替样式（视觉更美观）
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.highlight:  # 启用代码高亮核心扩展
+      anchor_linenums: true  # 可选：为代码行添加锚点（便于跳转）
+  - pymdownx.superfences:  # 支持嵌套代码块、自定义格式等高级功能
+
+copyright: CopyRight @ 2025-12-30 CCChiJi All Rights Reserved
