@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Welcome to CCChiJiDocs
 
+这是一个自用的学习笔记博客，使用MkDocs(Material)搭建
+
+关于MkDocs：
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+如有侵权，请尽快告知删除😋
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
