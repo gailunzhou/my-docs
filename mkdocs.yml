@@ -17,6 +17,7 @@ theme:
     - search.suggest #搜索建议
     - search.highlight #搜索结果高亮
     - content.tabs.link #内容标签页支持锚点
+    - content.code.copy #支持代码块复制
   palette: #配色方案（支持自动切换暗黑/亮色）
     - media: "(prefers-color-scheme: light)" #亮色模式
       scheme: default
@@ -30,6 +31,11 @@ theme:
 nav: #网站导航结构（侧边栏和顶部标签页的内容）
   - 首页: index.md # 导航项名称 -> 对应docs目录下的Markdown文件
   - 软件: 
+    - C&C++: 
+      - 学习文档1: software/C&C++/C入门-day1-熟悉研发环境.md
+      - 学习文档2: software/C&C++/C入门-day1-职业发展&学习心态&学习方法.md
+      - 学习文档3: software/C&C++/Windows下VS Code CC++编译及运行环境安装.md
+      - 个人学习笔记1: software/C&C++/2026-01-04-C&C++笔记.md
     - STM32: 
       - AD: software/STM32/2025-12-30-AD学习笔记.md
       - TIM_Encoder: software/STM32/2025-12-30-定时器编码器接口笔记.md
