@@ -32,7 +32,22 @@ nav: #网站导航结构（侧边栏和顶部标签页的内容）
   - 首页: index.md # 导航项名称 -> 对应docs目录下的Markdown文件
   - 软件: 
     - C&C++: 
-      - 个人学习笔记1: software/C&C++/2026-01-04-C&C++笔记.md
+      - 笔记1: software/C&C++/01-05-C笔记.md
+      - 笔记2: software/C&C++/01-06-C笔记.md
+      - 笔记3: software/C&C++/01-07-C笔记.md
+      - 笔记4: software/C&C++/01-08-C笔记.md
+      - 笔记5: software/C&C++/01-09-C笔记.md
+      - 笔记6: software/C&C++/01-12-C笔记.md
+      - 笔记7: software/C&C++/01-13-C笔记.md
+      - 笔记8: software/C&C++/01-14-C笔记.md
+      - 笔记9: software/C&C++/01-15-C笔记.md
+      - 笔记10: software/C&C++/01-16-C笔记.md
+      - 笔记11: software/C&C++/01-17-C笔记（总结）.md
+      - 笔记12: software/C&C++/01-19-C笔记.md
+      - 笔记13: software/C&C++/01-20-C笔记.md
+      - 笔记14: software/C&C++/01-21-C笔记.md
+      - 笔记15: software/C&C++/01-22-C笔记.md
+      - 笔记16: software/C&C++/01-23-C笔记.md
     - STM32: 
       - AD: software/STM32/2025-12-30-AD学习笔记.md
       - TIM_Encoder: software/STM32/2025-12-30-定时器编码器接口笔记.md
