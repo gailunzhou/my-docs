@@ -60,6 +60,8 @@ nav: #网站导航结构（侧边栏和顶部标签页的内容）
     - STM32: 
       - AD: software/STM32/2025-12-30-AD学习笔记.md
       - TIM_Encoder: software/STM32/2025-12-30-定时器编码器接口笔记.md
+
+    - 面试题: software/面试题/常见面试题.md
       
   - 外部资源:
     - MkDocs 官网: https://mkdocs.org
