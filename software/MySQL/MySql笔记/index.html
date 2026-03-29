@@ -1,0 +1,3456 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../C%26C%2B%2B/03-17-C%E7%AC%94%E8%AE%B0/">
+      
+      
+        <link rel="next" href="../../STM32/2025-12-30-AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>笔记 - CCChiJi Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mysql" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="CCChiJi Docs" class="md-header__button md-logo" aria-label="CCChiJi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 8-1.33.09C9.81 7.07 7.4 4.5 5 4.5c0 0-1.97 2.96-.04 6.91-.55.83-.89 1.26-.96 2.25l-1.93.29.21.98 1.76-.26.14.71-1.57.94.47.89 1.45-.89C5.68 18.76 8.59 20 12 20s6.32-1.24 7.47-3.68l1.45.89.47-.89-1.57-.94.14-.71 1.76.26.21-.98-1.93-.29c-.07-.99-.41-1.42-.96-2.25C20.97 7.46 19 4.5 19 4.5c-2.4 0-4.81 2.57-5.67 3.59zm-3 3a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m6 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-4 3h2l-.7 1.39c.2.64.76 1.11 1.45 1.11a1.5 1.5 0 0 0 1.5-1.5h.5a2 2 0 0 1-2 2c-.75 0-1.4-.41-1.75-1-.35.59-1 1-1.75 1a2 2 0 0 1-2-2h.5a1.5 1.5 0 0 0 1.5 1.5c.69 0 1.25-.47 1.45-1.11z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CCChiJi Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../C%26C%2B%2B/01-05-C%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  
+  软件
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="https://mkdocs.org" class="md-tabs__link">
+          
+  
+  
+  外部资源
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CCChiJi Docs" class="md-nav__button md-logo" aria-label="CCChiJi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 8-1.33.09C9.81 7.07 7.4 4.5 5 4.5c0 0-1.97 2.96-.04 6.91-.55.83-.89 1.26-.96 2.25l-1.93.29.21.98 1.76-.26.14.71-1.57.94.47.89 1.45-.89C5.68 18.76 8.59 20 12 20s6.32-1.24 7.47-3.68l1.45.89.47-.89-1.57-.94.14-.71 1.76.26.21-.98-1.93-.29c-.07-.99-.41-1.42-.96-2.25C20.97 7.46 19 4.5 19 4.5c-2.4 0-4.81 2.57-5.67 3.59zm-3 3a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m6 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-4 3h2l-.7 1.39c.2.64.76 1.11 1.45 1.11a1.5 1.5 0 0 0 1.5-1.5h.5a2 2 0 0 1-2 2c-.75 0-1.4-.41-1.75-1-.35.59-1 1-1.75 1a2 2 0 0 1-2-2h.5a1.5 1.5 0 0 0 1.5 1.5c.69 0 1.25-.47 1.45-1.11z"/></svg>
+
+    </a>
+    CCChiJi Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    软件
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C&C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C&C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-05-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-06-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-07-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-08-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-09-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-12-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-13-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-14-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-15-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-16-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-17-C%E7%AC%94%E8%AE%B0%EF%BC%88%E6%80%BB%E7%BB%93%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-19-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-20-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-21-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-22-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记15
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-23-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-26-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-27-C%2B%2B%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记18
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-28-C%2B%2B%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-29-C%2B%2B%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记20
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/01-30-C%2B%2B%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记21
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/02-02-C%2B%2B%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记22
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%26C%2B%2B/03-17-C%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MySQL
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MySQL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &#x20;基础学习笔记
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" 基础学习笔记">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.简单查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 删除列中的重复信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 简单数学运算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 重命名操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 设置显示格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 过滤查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. MySQL执行顺序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 逻辑运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 逻辑运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-and-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 AND--并且
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-or-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 OR--或者
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-not-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 NOT--取反--否定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 范围查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 集合查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 空值查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 模糊查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 正则表达式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 聚集函数/聚合函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 分组查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 结果排序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. 分页查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 多表查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. 多表查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 笛卡尔积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 内连接查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.2 内连接查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1821" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2.1 隐式内连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1822" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2.2 显示内连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3 外连接查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.3 外连接查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1831" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3.1 左外连接查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1832" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3.2 右外连接查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#184" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4 自连接查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#185" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5 子查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-dml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. DML操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. DML操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 新增数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 修改数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.3 删除数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. 数据备份与恢复
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. 数据备份与恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.1 数据备份(数据导出)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.2 数据恢复(数据导入)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. 函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. 函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1 内置函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21.1 内置函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.1 聚集（聚合）函数:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2112-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.2 CAST函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2113-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.3 关于DECIMAL类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2114-convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.4 CONVERT 函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2115-ifnull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.5 IFNULL 函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.2 自定义函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. 存储过程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. 索引
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    STM32
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    STM32
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STM32/2025-12-30-AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STM32/2025-12-30-%E5%AE%9A%E6%97%B6%E5%99%A8%E7%BC%96%E7%A0%81%E5%99%A8%E6%8E%A5%E5%8F%A3%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TIM_Encoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QT
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QT/QT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面试题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外部资源
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    外部资源
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://mkdocs.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs 官网
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://squidfunk.github.io/mkdocs-material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material 文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &#x20;基础学习笔记
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" 基础学习笔记">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.简单查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 删除列中的重复信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 简单数学运算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 重命名操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 设置显示格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 过滤查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. MySQL执行顺序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 逻辑运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 逻辑运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-and-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 AND--并且
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-or-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 OR--或者
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-not-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 NOT--取反--否定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 范围查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 集合查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 空值查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 模糊查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 正则表达式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 聚集函数/聚合函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 分组查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 结果排序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. 分页查询
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 多表查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. 多表查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 笛卡尔积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 内连接查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.2 内连接查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1821" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2.1 隐式内连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1822" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2.2 显示内连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3 外连接查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.3 外连接查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1831" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3.1 左外连接查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1832" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3.2 右外连接查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#184" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4 自连接查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#185" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5 子查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-dml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. DML操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. DML操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 新增数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 修改数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.3 删除数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. 数据备份与恢复
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. 数据备份与恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.1 数据备份(数据导出)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.2 数据恢复(数据导入)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. 函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. 函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1 内置函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21.1 内置函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.1 聚集（聚合）函数:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2112-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.2 CAST函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2113-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.3 关于DECIMAL类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2114-convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.4 CONVERT 函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2115-ifnull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1.5 IFNULL 函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.2 自定义函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. 存储过程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. 索引
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mysql">&#x20;MySql</h1>
+<h2 id="_1">&#x20;基础学习笔记</h2>
+<h3 id="1">1.简单查询</h3>
+<p>语法：&#x20;</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="p">;</span>
+</code></pre></div>
+<p>解释：</p>
+<p>`SELECT * FROM 数据源;`</p>
+<p>其中的 * 表示所有信息</p>
+<p>`SELECT 列名 FROM 数据源; `</p>
+<p>其中列名可为多个列名，列如：</p>
+<p>`SELECT 列名1 ,列名2 ,列名3 , ... FROM 数据源; `</p>
+<h3 id="2">2. 删除列中的重复信息</h3>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+<p>解释：</p>
+<p>该代码中的<strong>DISTINCT</strong>关键字就是代表去除重复内容的作用</p>
+<h3 id="3">3. 简单数学运算</h3>
+<p>可直接使用列名和数字之间进行加减乘除</p>
+<p>例1：</p>
+<p>已知一批商品的售价列名称为：sale_price 批发折扣列为: cutoff，商品的数据源叫product，那么查找出该类商品的所有批发价</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>例2：</p>
+<p>在例1基础上，已知该类商品的成本价格列名为cost_price，现在需要列出50个该商品的成本价</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">cost_price</span><span class="o">*</span><span class="mi">50</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>例3：</p>
+<p>在例2基础上，假设每个运费为1元，列出成本价</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">cost_price</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">50</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="4">4. 重命名操作</h3>
+<p>语法:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">重命名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">重命名</span><span class="mi">2</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+<p>解释：</p>
+<p>重命名操作只能对<strong>SELECT后的列名</strong>和<strong>FROM后的数据源名</strong>进行操作</p>
+<p>例4：</p>
+<p>在例3基础上，将成本价+运费的部分重命名为进价（cost）</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">cost_price</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">50</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">costFROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>例5：</p>
+<p>在例4基础上，将数据源重命名为p</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">cost_price</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">50</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>补充：</strong></p>
+<p>重命名操作的<strong>as</strong>可省略，效果和原来一样</p>
+<h2 id="5">5. 设置显示格式</h2>
+<p>MySQL提供了一种函数用于拼接字符串</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">CONCAT</span><span class="w"> </span><span class="p">(</span><span class="n">str1</span><span class="w"> </span><span class="p">,</span><span class="n">str2</span><span class="w"> </span><span class="p">,</span><span class="n">str3</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span>
+</code></pre></div>
+<p>例1：需求:查询商品的名字和零售价。格式：xxx商品的零售价为：xxx</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;商品的零售价为：&#39;</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="6">6. 过滤查询</h2>
+<p>比较运算：</p>
+<ul>
+<li>&gt; 大于</li>
+<li>&lt; 小于</li>
+<li>\= 等于</li>
+<li>&gt;= 大于等于</li>
+<li>&lt;= 小于等于</li>
+<li>!= 不等于</li>
+</ul>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*/</span><span class="err">列名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">筛选条件</span>
+</code></pre></div>
+<p>例1:</p>
+<p>查询货品零售价为119的所有货品信息.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">119</span><span class="p">;</span>
+</code></pre></div>
+<p>例2:</p>
+<p>查询货品名为罗技G9X的所有货品信息.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;罗技G9X&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>例3:</p>
+<p>查询货品名 不为 罗技G9X的所有货品信息.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;罗技G9X&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>例4:</p>
+<p>查询分类编号不等于2的货品信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p>例5:</p>
+<p>查询货品名称,零售价小于等于200的货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</code></pre></div>
+<p>例6：</p>
+<p>查询id，货品名称，批发价大于350的货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="n">product_name</span><span class="p">,</span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="7-mysql">7. MySQL执行顺序</h2>
+<p><strong>FROM</strong> -&gt; 决定从哪一个表查询</p>
+<p><strong>JOIN</strong> -&gt; 决定跟哪一个表关联</p>
+<p><strong>ON</strong> -&gt; 决定关联表的共同条件</p>
+<p><strong>WHERE</strong> -&gt; 决定从表中哪一些开始查询（条件过滤，学会善用条件过滤）</p>
+<p><strong>GROUP BY</strong> -&gt; 决定按照什么分组进行组内查询，一般跟聚集函数联合使用</p>
+<p>‌<strong>SELECT</strong>‌：从分组和筛选后的结果中选择需要的列。</p>
+<p><strong>HAVING</strong> -&gt; 在组内条件过滤，一般使用SELECT语句中的聚集函数作为过滤条件</p>
+<p><strong>ORDER BY</strong> -&gt; 决定显示的排序规则</p>
+<p><strong>LIMIT</strong> -&gt; 决定每一页显示多少条件记录</p>
+<h2 id="8">8. 逻辑运算</h2>
+<h3 id="81-and-">8.1 AND--并且</h3>
+<p>选择id，货品名称，批发价在300-400之间的货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="82-or-">8.2 OR--或者</h3>
+<p>选择id，货品名称，分类编号为2,4的所有货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</code></pre></div>
+<p>选择id，货品名称，分类编号的货品零售价大于等于250或者是成本大于等于200</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="w"> </span><span class="p">,</span><span class="n">cost_price</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">250</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">cost_price</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="83-not-">8.3 NOT--取反--否定</h3>
+<p>选择id，货品名称，分类编号不为2的所有商品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p>优先级：</p>
+<p>所有比较运算符 &gt; NOT &gt; AND &gt; OR</p>
+<h2 id="9">9. 范围查询</h2>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="k">minvalue</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">maxvalue</span><span class="p">;</span>
+</code></pre></div>
+<p>例1：</p>
+<p>选择id，货品名称，批发价在300-400之间的货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+</code></pre></div>
+<p>例2:</p>
+<p>选择id，货品名称，批发价不在300-400之间的货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="10">10. 集合查询</h2>
+<p>使用IN运算符，判断列的值是否在指定的集合中</p>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">IN</span><span class="p">(</span><span class="err">值</span><span class="mi">1</span><span class="w"> </span><span class="err">，值</span><span class="mi">2</span><span class="p">...);</span>
+</code></pre></div>
+<p>例1:</p>
+<p>选择id，货品名称，分类编号为2,4的所有货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+</code></pre></div>
+<p>例2:</p>
+<p>选择id，货品名称，分类编号不为2,4的所有货品</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="11">11. 空值查询</h2>
+<p>使用 IS NULL：判断列的值是否为空</p>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<p>注意：</p>
+<p>列的值为null和空字符串不同 ，如果是空字符串则应该 = ""；</p>
+<p>例1:</p>
+<p>查询商品名为NULL的所有商品信息。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<p>例2:</p>
+<p>查询商品名不为NULL的所有商品信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="12">12. 模糊查询</h2>
+<p>使用LIKE关键字执行通配查询，查询条件可包含文字字符或数字：</p>
+<ul>
+<li>%:通配符：可表示零或多个任意的字符。</li>
+<li>_:通配符：可表示任意的一个字符。</li>
+<li>[]通配符：用来实现匹配部分值得特殊字符。</li>
+<li>[^]通配符：不在所列的单个字符。</li>
+</ul>
+<p>例1:</p>
+<p>查询id，货品名称，货品名称匹配'%罗技M9_'</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%罗技M9_&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>例2:</p>
+<p>查询id，货品名称，分类编号,零售价大于等于20并且货品名称匹配'%罗技M1__'</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%罗技M1__&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="13">13. 正则表达式</h2>
+<p>MySQL中使用 REGEXP 操作符来进行正则表达式匹配</p>
+<p>例1：</p>
+<p>查找 name 字段中以 <strong>'罗技'</strong> 为开头的所有数据</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="n">REGEXP</span><span class="w"> </span><span class="s1">&#39;^罗技&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>^：表示匹配输入字符串的开始位置</p>
+<p>例2:</p>
+<p>查找 name 字段中以 5 为结尾的所有数据</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="n">REGEXP</span><span class="w"> </span><span class="s1">&#39;5$&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>\$：表示匹配输入字符串的结束位置</p>
+<p>例3:</p>
+<p>查找 name 字段中包含 <strong>'罗技'</strong> 字符串的所有数据</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="n">REGEXP</span><span class="w"> </span><span class="s1">&#39;罗技&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>[...]：字符集合，匹配所办好的任意一个字符，例如'[abc]'可以匹配"plain"中的'a'</p>
+<p>.  :匹配除"\n"之外任何单个字符，要匹配包括"\n"在内的任何字符，请使用像"[.\n]"的模式</p>
+<p>[^...]：负值字符集合，匹配未包含的任何字符</p>
+<p>p1|p2|p3：匹配p1或p2或p3</p>
+<h2 id="14">14. 聚集函数/聚合函数</h2>
+<p>聚集函数作用于<strong>一组数据，并对一组数据</strong>返回一个值。</p>
+<ul>
+<li>COUNT：统计结果记录数 如果列的值为null 不会计算在内的</li>
+<li>MAX： 统计计算最大值</li>
+<li>MIN： 统计计算最小值</li>
+<li>SUM： 统计计算求和</li>
+<li>AVG： 统计计算平均值 如果列的值为null 不会计算在内的</li>
+</ul>
+<p>例1:</p>
+<p>查询所有商品平均零售价</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>直接这样计算只计算了非null的数据，如果要正确计算平均值，即包含null的数据条，则使用IFNULL函数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">IFNULL</span><span class="p">(</span><span class="n">expr1</span><span class="w"> </span><span class="p">,</span><span class="n">expr2</span><span class="p">);</span>
+</code></pre></div>
+<p>解释：</p>
+<p>如果expr1为NULL则用expr2替代</p>
+<p>因此正确写法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">IFNULL</span><span class="p">(</span><span class="n">sale_price</span><span class="w"> </span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>例2:</p>
+<p>查询商品总记录数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>例3:</p>
+<p>查询分类为2的商品总数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p>例4:</p>
+<p>查询商品的最小零售价，最高零售价，以及所有商品零售价总和</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="k">MAX</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="k">SUM</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="15">15. 分组查询</h2>
+<p>可以使用GROUP BY 子句将表中的数据分成若干组，再对分组之后的数据做统计计算，一般使用聚集函数才使用GROUP BY.</p>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code>SELECT 聚集函数或者分组的列
+
+FROM table_name
+
+WHERE 条件
+
+GROUP BY 列名
+
+HAVING 分组之后的条件；
+</code></pre></div>
+<p>注意：</p>
+<ul>
+<li>GROUP BY 后面的列名的值要有重复性分组才有意义;</li>
+<li>不能在 WHERE 子句中使用函数（注意）;</li>
+<li>可以在 HAVING 子句中使用函数;</li>
+</ul>
+<p>例1：</p>
+<p>查询每个商品分类编号和每个商品分类各自的平均零售价</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="k">AVG</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span><span class="p">;</span>
+</code></pre></div>
+<p>例2：</p>
+<p>查询每个商品分类编号和每个商品分类各自的商品总数。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span><span class="p">;</span>
+</code></pre></div>
+<p>例3：</p>
+<p>查询每个商品分类编号和每个商品分类中零售价大于100的商品总数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="k">COUNT</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span><span class="p">;</span>
+</code></pre></div>
+<p>例4：</p>
+<p>查询零售价总和大于1500的商品分类编号以及总零售价和</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="k">SUM</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1500</span><span class="p">;</span>
+</code></pre></div>
+<p>这里如果写成</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="k">SUM</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">sale_price</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1500</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span><span class="p">;</span>
+</code></pre></div>
+<p>会报错，因为WHERE的执行优先级大于GROUP BY因此会先进行筛选，但是GROUP BY要从所有的数据中以category_id来分组，拿不到全部数据，会无法执行</p>
+<p><strong>WHERE后不能使用聚合函数</strong></p>
+<h2 id="16">16. 结果排序</h2>
+<p>使用ORDER BY子句将结果的记录排序</p>
+<ul>
+<li>ASC 升序 缺省，不写则默认为升序</li>
+<li>DESC 降序</li>
+<li>ORDER BY 语句出现在SELECT语句的最后</li>
+</ul>
+<p>语法：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">selectList</span><span class="o">&gt;</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">列名</span><span class="mi">1</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">/</span><span class="k">DESC</span><span class="p">],</span><span class="err">列名</span><span class="mi">2</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">/</span><span class="k">DESC</span><span class="p">]...;</span>
+</code></pre></div>
+例1：</p>
+<p>选择id，货品名称，分类编号,零售价并且按零售价降序排序</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="w"> </span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<p>例2：</p>
+<p>选择id，货品名称，分类编号,零售价先按分类编号排序,再按零售价排序</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="w"> </span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="p">;</span>
+</code></pre></div>
+<p>例3：</p>
+<p>查询M系列并按照批发价排序(加上别名)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="n">cost</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%M%&#39;</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
+</code></pre></div>
+<p>例4：</p>
+<p>查询分类为2并按照批发价排序(加上别名)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">sale_price</span><span class="o">*</span><span class="n">cutoff</span><span class="w"> </span><span class="n">cost</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="17">17. 分页查询</h2>
+<ul>
+<li>假分页：把数据全部查询出来，存在于内存中，翻页的时候，直接从内存中去截取</li>
+<li>真分页：每次翻页都去数据库中去查询数据</li>
+<li>假分页：翻页比较快，但是第一次查询很慢，若数据过大，可能导致内存溢出</li>
+<li>真分页：翻页比较慢，若数据过大，不会导致内存溢出</li>
+</ul>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">;</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="n">beginIndex</span><span class="p">,</span><span class="n">pageSize</span><span class="p">;</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a><span class="n">beginIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">currentPage</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pageSize</span><span class="p">;</span>
+<a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>
+<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a><span class="err">第一个</span><span class="o">?</span><span class="p">:</span><span class="w"> </span><span class="err">表示本页</span><span class="p">,</span><span class="err">开始索引</span><span class="p">(</span><span class="err">从</span><span class="mi">0</span><span class="err">开始</span><span class="p">).</span>
+<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a>
+<a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a><span class="err">第二个</span><span class="o">?</span><span class="p">:</span><span class="w"> </span><span class="err">每页显示的条数</span>
+</code></pre></div>
+<h2 id="18">18. 多表查询</h2>
+<h3 id="181">18.1 笛卡尔积</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="p">,</span><span class="n">dept</span><span class="p">;</span>
+</code></pre></div>
+<p>笛卡尔积就是两个集合相乘</p>
+<p>例如：</p>
+<p>集合A*集合B，集合A：[a ,b] ，集合B：[1 ,2 ,3]</p>
+<p>A*B结果为：</p>
+<p>[a ,1] ,[a ,2] ,[a ,3] ,[b ,1] ,[b ,2] ,[b ,3]</p>
+<h3 id="182">18.2 内连接查询</h3>
+<p>就是屏蔽笛卡尔积，将错误的数据屏蔽掉</p>
+<h4 id="1821">18.2.1 隐式内连接</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="p">(</span><span class="err">表</span><span class="mi">1</span><span class="w"> </span><span class="err">，表</span><span class="mi">2</span><span class="w"> </span><span class="err">，表</span><span class="mi">3</span><span class="p">...)</span>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="err">等值条件</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="1822">18.2.2 显示内连接</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="k">FROM</span><span class="w"> </span><span class="err">表</span><span class="mi">1</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">表</span><span class="mi">2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">表</span><span class="mi">1</span><span class="err">和表</span><span class="mi">2</span><span class="err">的等值条件</span>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">表</span><span class="mi">3</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">表</span><span class="mi">1</span><span class="err">和表</span><span class="mi">3</span><span class="err">的等值条件</span><span class="o">/</span><span class="err">表</span><span class="mi">2</span><span class="err">和表</span><span class="mi">3</span><span class="err">的等值关系</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="p">...</span>
+<a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a><span class="p">;</span>
+</code></pre></div>
+<h3 id="183">18.3 外连接查询</h3>
+<h4 id="1831">18.3.1 左外连接查询</h4>
+<p>查询出JOIN左边表的全部数据查询出来,JOIN右边的表不匹配的数据使用NULL来填充数据</p>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span>
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="n">A</span>
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">数据源</span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">等值条件</span>
+</code></pre></div>
+<h4 id="1832">18.3.2 右外连接查询</h4>
+<p>查询出JOIN右边表的全部数据查询出来,JOIN左边的表不匹配的数据使用NULL来填充数据</p>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">列名</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="k">FROM</span><span class="w"> </span><span class="err">数据源</span><span class="n">A</span>
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">数据源</span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">等值条件</span>
+</code></pre></div>
+<h3 id="184">18.4 自连接查询</h3>
+<p>本质也是多表查询，只是多张表是同一个名字</p>
+<p>需求：查询每个商品分类的名称和父分类名称（所属分类的名称）</p>
+<p>左外连接实现自连接</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="p">,</span><span class="n">p</span><span class="p">.</span><span class="n">category_name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">pDirname</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product_category</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">product_category</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">parent_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<p>内连接实现自连接</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="p">,</span><span class="n">p</span><span class="p">.</span><span class="n">category_name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">pDirname</span>
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product_category</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">product_category</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">parent_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<p>注意：</p>
+<p>自连接查询时，等值条件一般都是：子表的父ID = 父表的ID</p>
+<h3 id="185">18.5 子查询</h3>
+<p>也叫嵌套查询</p>
+<p>一个查询语句嵌套在另一个查询语句当中</p>
+<p>例1：</p>
+<p>需求: 查询零售价比罗技MX1100更高的所有商品信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;罗技MX1100&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>例2：</p>
+<p>需求: 查询分类编号和折扣与罗技M100相同的所有商品信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">cutoff</span><span class="w"> </span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="p">,</span><span class="n">cutoff</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;罗技M100&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>子查询可以放WHERE后，也可以放在FROM后面，放在FROM后面时作为临时表使用，一般很少放在FROM后，会降低可读性</p>
+<h2 id="19-dml">19. DML操作</h2>
+<p>主要是对表中的数据进行增删改操作</p>
+<h3 id="191">19.1 新增数据</h3>
+<p>插入语句:一次插入操作只插入一行</p>
+<p><strong>INSERT INTO</strong> table_name (column1,column2,column3...)</p>
+<p><strong>VALUES</strong> (value1,value2,value3...);</p>
+<p><strong>INSERT INTO</strong> table_name <strong>VALUES</strong> (value1,value2,value3...);</p>
+<p>例1：</p>
+<p>需求：新增一条员工数据 empno = 1000 ename = '张三' job = CLERK deptno = 20</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">emp</span><span class="p">(</span><span class="n">empno</span><span class="w"> </span><span class="p">,</span><span class="n">ename</span><span class="w"> </span><span class="p">,</span><span class="n">job</span><span class="w"> </span><span class="p">,</span><span class="n">deptno</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="mi">1000</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;张三&#39;</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;CLERK&#39;</span><span class="w"> </span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</code></pre></div>
+<p>如果不指定列名(column)，则默认是要为全部列新增数据，新增数据中的值个数要等于列数</p>
+<p>例2：</p>
+<p>需求：新增一名员工数据 empno = 1002 ename = '李四' job = CLERK deptno = 20</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="mi">1002</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;李四&#39;</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;CLERK&#39;</span><span class="w"> </span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</code></pre></div>
+<p>批量新增： INSERT INTO 表名(字段1 ，字段2 ，字段3...) VALUES/VALUE (值1 ，值2 ，值3) ,(值1 ，值2 ，值3) ,(值1 ，值2 ，值3)...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">emp</span><span class="p">(</span><span class="n">empno</span><span class="w"> </span><span class="p">,</span><span class="n">ename</span><span class="w"> </span><span class="p">,</span><span class="n">deptno</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;张三&#39;</span><span class="w"> </span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">,(</span><span class="mi">1002</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;李四&#39;</span><span class="w"> </span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">,(</span><span class="mi">1003</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;王五&#39;</span><span class="w"> </span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="192">19.2 修改数据</h3>
+<p>UPDATE 表名 SET 字段1 = '修改后的值' ,字段2 = '修改后的值'... WHERE 过滤条件</p>
+<p><strong>若不加过滤条件则是修改整张表的数据</strong></p>
+<p>例1：</p>
+<p>需求:将零售价大于300的货品零售价上调0.2倍</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span>
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+</code></pre></div>
+<p>例2：</p>
+<p>需求:将零售价大于300的有线鼠标的货品零售价上调0.1倍</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sale_price</span><span class="o">*</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span>
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">300</span>
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="k">AND</span><span class="w"> </span><span class="n">category_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">product_category</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;无线鼠标&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="193">19.3 删除数据</h3>
+<p>DELETE FROM 表名 WHERE 过滤条件</p>
+<p><strong>如果不加 WHERE 过滤条件则是删除整张表</strong></p>
+<p>例1：</p>
+<p>删除员工表中员工号为1000的数据</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="20">20. 数据备份与恢复</h2>
+<h3 id="201">20.1 数据备份(数据导出)</h3>
+<p>数据备份就是将数据库中的数据导出为一个sql文件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>mysqldump<span class="w"> </span>-u账户<span class="w"> </span>-p密码<span class="w"> </span>数据库名称<span class="se">\&gt;</span>脚本文件存储地
+</code></pre></div>
+<h3 id="202">20.2 数据恢复(数据导入)</h3>
+<p>数据恢复就是将一个sql文件执行后，将sql文件中的表结构、数据都导入到一个新的数据库中</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>mysql<span class="w"> </span>-u账户<span class="w"> </span>-p密码<span class="w"> </span>数据库名称<span class="se">\&lt;</span><span class="w"> </span>脚本文件存储地址
+</code></pre></div>
+<h2 id="21">21. 函数</h2>
+<h3 id="211">21.1 内置函数</h3>
+<p>内置函数就是sql内部已经提供好的，我们拿来用就可以了的函数</p>
+<h4 id="2111">21.1.1 聚集（聚合）函数:</h4>
+<ol>
+<li>
+<p>count</p>
+</li>
+<li>
+<p>sum</p>
+</li>
+<li>
+<p>avg</p>
+</li>
+<li>
+<p>max</p>
+</li>
+<li>
+<p>min</p>
+</li>
+</ol>
+<h4 id="2112-cast">21.1.2 CAST函数</h4>
+<p>转换数据类型：</p>
+<p>CAST(值 AS 类型)</p>
+<p>例如：</p>
+<p>将sale_price int类型 转换为 DECIMAL 浮点型</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="p">,</span><span class="k">CAST</span><span class="p">(</span><span class="n">sale_price</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span><span class="w"> </span>
+<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<p>这里的DECIMAL(10,5)意思是小数点前+小数点后的位数 = 10，小数点后的位数必须为5位</p>
+<h4 id="2113-decimal">21.1.3 关于DECIMAL类型</h4>
+<p>column decimal(P,D)</p>
+<p>在上面的语法中：</p>
+<p>P是表示有效数字数的精度(总长度)。 P范围为1〜65。</p>
+<p>D是表示小数点后的位数。 D的范围是0~30。MySQL要求<strong>D小于或等于(&lt;=)P</strong>。</p>
+<p>DECIMAL(P，D)表示列<strong>可以存储D位小数的P位数</strong>。十进制列的实际范围取决于精度和刻度。</p>
+<p>综上，可以将上述小数转换为整数：</p>
+<p>select cast('123.4' as decimal(P,D))</p>
+<h4 id="2114-convert">21.1.4 CONVERT 函数</h4>
+<p>和CAST 函数作用相同，都是转换数据类型</p>
+<p>例如：</p>
+<p>将sale_price int类型 转换为 DECIMAL 浮点型</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">sale_price</span><span class="w"> </span><span class="p">,</span><span class="k">CONVERT</span><span class="p">(</span><span class="n">sale_price</span><span class="w"> </span><span class="p">,</span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="2115-ifnull">21.1.5 IFNULL 函数</h4>
+<p>IFNULL(参数1 ,参数2) 如果列中参数1为NULL，则用参数2填充</p>
+<p>例如：</p>
+<p>查询所有商品名称，如果商品名称为NULL，则使用'默认商品'填充</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">IFNULL</span><span class="p">(</span><span class="n">product_name</span><span class="w"> </span><span class="p">,</span><span class="s1">&#39;默认商品&#39;</span><span class="p">)</span>
+<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="212">21.2 自定义函数</h3>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="k">create</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="err">函数名</span><span class="p">(</span><span class="err">参数名</span><span class="w"> </span><span class="err">参数类型</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="err">返回类型</span>
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a><span class="k">begin</span>
+<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="w">  </span><span class="err">写函数体的内容</span>
+<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a><span class="k">end</span><span class="p">;</span>
+</code></pre></div>
+<p>如何调用自定义函数?</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="k">select</span><span class="w"> </span><span class="err">函数名</span><span class="p">();</span>
+</code></pre></div>
+<p>如果自定义函数创建失败，需要开启函数创建的日志</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="k">show</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;log_bin_trust_function_creators&#39;</span><span class="p">;</span>
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a><span class="k">set</span><span class="w"> </span><span class="k">global</span><span class="w"> </span><span class="n">log_bin_trust_function_creators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>两个数相加</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">test_add</span><span class="p">(</span><span class="n">num1</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="p">,</span><span class="n">num2</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span><span class="w"> </span><span class="k">RETURNS</span><span class="w"> </span><span class="nb">INT</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="k">BEGIN</span>
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="w">  </span><span class="k">RETURN</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
+<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a><span class="k">END</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="22">22. 存储过程</h2>
+<p>可以把代码中复杂业务逻辑(要执行100sql),封装为一个存储过程.编译好了以后放在数据库中，如果要用的话，就直接调用该存储过程就可以了，它就相当于执行了100行sql</p>
+<p><strong>函数和存储过程的区别:</strong></p>
+<ul>
+<li>函数一般是将多个都要用的地方封装起来</li>
+<li>存储过程是将一个复杂操作封装起来</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="c1">-- 1 定义存储过程  </span>
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="k">create</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="n">yaosangsum</span><span class="p">(</span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">,</span><span class="k">in</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="k">out</span><span class="w"> </span><span class="k">sum</span><span class="w"> </span><span class="nb">int</span><span class="p">)</span><span class="c1">--in表输入 out表输出</span>
+<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="k">begin</span>
+<a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a><span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-76-5" name="__codelineno-76-5" href="#__codelineno-76-5"></a><span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="k">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-76-6" name="__codelineno-76-6" href="#__codelineno-76-6"></a><span class="k">end</span><span class="p">;</span>
+<a id="__codelineno-76-7" name="__codelineno-76-7" href="#__codelineno-76-7"></a><span class="k">drop</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="n">yaosangsum</span><span class="p">;</span>
+<a id="__codelineno-76-8" name="__codelineno-76-8" href="#__codelineno-76-8"></a><span class="c1">-- 2 调用存储过程</span>
+<a id="__codelineno-76-9" name="__codelineno-76-9" href="#__codelineno-76-9"></a><span class="k">call</span><span class="w"> </span><span class="n">yaosangsum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">@</span><span class="n">xxx</span><span class="p">);</span>
+<a id="__codelineno-76-10" name="__codelineno-76-10" href="#__codelineno-76-10"></a><span class="k">select</span><span class="w"> </span><span class="o">@</span><span class="n">xxx</span><span class="p">;</span>
+</code></pre></div>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">ProductByID</span><span class="p">(</span><span class="k">in</span><span class="w"> </span><span class="n">ID1</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="k">BEGIN</span>
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">product</span>
+<a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ID1</span><span class="p">;</span>
+<a id="__codelineno-77-6" name="__codelineno-77-6" href="#__codelineno-77-6"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-77-7" name="__codelineno-77-7" href="#__codelineno-77-7"></a>
+<a id="__codelineno-77-8" name="__codelineno-77-8" href="#__codelineno-77-8"></a><span class="c1">-- 调用</span>
+<a id="__codelineno-77-9" name="__codelineno-77-9" href="#__codelineno-77-9"></a><span class="k">CALL</span><span class="w"> </span><span class="n">ProductByID</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="23">23. 索引</h2>
+<p>索引使用注意事项:</p>
+<ol>
+<li>如果查询少，增删数据多，不适合使用索引，增删数据时会导致底层产生的索引也会跟着改变</li>
+<li>如果某个字段不会作为查询条件，那么该字段也不适合加索引</li>
+<li>如果一个字段的值分布很集中，不适合加索引，例如性别：只有男和女两个节点</li>
+<li>如果一个表中有主键，则会自动为主键添加索引</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CopyRight @ 2025-12-30 CCChiJi All Rights Reserved
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "navigation.tabs", "navigation.expand", "navigation.sections", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
